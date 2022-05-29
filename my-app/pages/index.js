@@ -241,10 +241,10 @@ export default function Home() {
             walletConnected ? (
               <div>
                 <div className={styles.description}>
-                    Till now {utils.formatEther(tokensMinted)}/10000 have been minted !!!
+                    Till now {utils.formatEther(balanceOfCDTokens)}/10000 have been minted !!!
                 </div>
                 <div className={styles.description}>
-                  You have minted {utils.formatEther(balanceOfCDTokens)} Cryptp Devs token for now
+                  You have minted {utils.formatEther(tokensMinted)} Cryptp Devs token for now
                 </div>
                 {renderButton()}
               </div>
