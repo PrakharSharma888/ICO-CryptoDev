@@ -1,4 +1,4 @@
-const TOKEN_CONTRACT_ABI = "0xD51840C721B67CE3e843BE30aedBF123BBfd"
+const TOKEN_CONTRACT_ADDRESS = "0x48DDCBCF37156F40e44DaD9a7fc31aaC5235D03C"
 const TOKEN_ABI = [
     {
       "inputs": [
@@ -221,7 +221,7 @@ const TOKEN_ABI = [
     },
     {
       "inputs": [],
-      "name": "maxTokens",
+      "name": "maxTotalSupply",
       "outputs": [
         {
           "internalType": "uint256",
@@ -421,8 +421,8 @@ const TOKEN_ABI = [
     }
   ]
 
-CONST NFT_CONTRACT_ADDRESS = ""
-CONST NFT_ABI = [
+const NFT_CONTRACT_ADDRESS =   "0x77f4612129F863bdf6D1208126659ce8f6ef203b"
+const NFT_ABI = [
     {
       "inputs": [
         {
@@ -1005,3 +1005,5 @@ CONST NFT_ABI = [
       "type": "receive"
     }
   ]
+
+module.exports = {TOKEN_CONTRACT_ADDRESS, TOKEN_ABI, NFT_CONTRACT_ADDRESS, NFT_ABI}

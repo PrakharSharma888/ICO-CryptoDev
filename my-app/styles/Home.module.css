@@ -51,6 +51,7 @@
   width: 100px;
   cursor: pointer;
   margin-bottom: 2%;
+  margin: 5px;
 }
 @media (max-width: 1000px) {
   .main {

@@ -12,7 +12,7 @@ contract CryptoDevToken is ERC20, Ownable{
     mapping (uint256 => bool) public tokenIdsClaimed;
     uint256 public constant tokenPrice = 0.001 ether; 
     uint256 public constant tokensPerNFT = 1 * 10**18; // to convert it into a big number and _mint accepts only bignumber
-    uint256 public constant maxTokens = 10000 * 10**18;
+    uint256 public constant maxTotalSupply  = 10000 * 10**18;
 
     constructor(address cryptoDevContract) ERC20("Crypto Devs Token","CD"){
         cryptoDevsNFT = ICryptoDevs(cryptoDevContract);
@@ -39,7 +39,7 @@ contract CryptoDevToken is ERC20, Ownable{
         uint requiredAmount = amount * tokenPrice;
         require(msg.value >= requiredAmount, "You paid less then the price!");
         uint requiredAmountBigNumber = requiredAmount * 10**18;
-        require(totalSupply() + requiredAmountBigNumber > maxTokens, "Tokens are all exausted guys!");
+        require(totalSupply() + requiredAmountBigNumber > maxTotalSupply , "Tokens are all exausted guys!");
 
         _mint(msg.sender, requiredAmountBigNumber);
     }
